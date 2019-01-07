@@ -2,6 +2,9 @@ const express = require("express");
 const morgan = require("morgan");
 const app = express();
 const cors = require("cors");
+const passport = require("./config/passport");
+
+app.use(passport.initialize());
 
 app.use(cors({
     origin: process.env.FRONT_END_DOMAIN
