@@ -8,6 +8,11 @@ async function create(req, res, next) {
     }
 }
 
+function index(req, res) {
+    return res.json(req.user.bookmarks);
+}
+
 module.exports = {
-    create
+    create,
+    index
 }
