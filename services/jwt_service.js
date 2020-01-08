@@ -1,5 +1,5 @@
 const JWT = require("jsonwebtoken");
-const expiry = "1d";
+const expiry = "60s";
 
 function generateToken(user) {
     const token = JWT.sign(
